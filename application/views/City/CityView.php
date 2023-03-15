@@ -366,7 +366,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Company</h4>
+            <h4>Add City</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -382,15 +382,15 @@
                             <div class="row p-3">
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Branch name</label>
-                                    <input type="text" class="form-control" id="branch_name" name="branch_name" required
+                                    <label>City name</label>
+                                    <input type="text" class="form-control" id="CityName" name="CityName" required
                                         value="<?php if (!empty($data))
-                                            echo $data[0]->branch_name; ?>" />
+                                            echo $data[0]->CityName; ?>" />
 
                                 </div>
 
                                 <?php if (!empty($data)) {
-                                    echo "<input name='branch_id' id='branch_id' value='" . $data[0]->branch_id . "' type='hidden' />";
+                                    echo "<input name='CityId' id='CityId' value='" . $data[0]->CityId . "' type='hidden' />";
                                 }
                                 ?>
 
@@ -427,7 +427,7 @@
 
 
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/branch_create.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/city_create.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 

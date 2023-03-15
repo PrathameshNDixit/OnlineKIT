@@ -442,7 +442,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Company</h4>
+            <h4>Add Bank</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -467,18 +467,20 @@
                                     <tr>
                                         <!-- <th>Sr.No</th> -->
                                         <th>Action</td>
-                                        <th>Branch Id</th>
-                                        <th>Branch Name </th>
+                                        <th>Bank Id</th>
+                                        <th>Bank Name </th>
 
                                     </tr>
                                 </thead>
+
+
                                 <tbody>
                                     <?php
                                     for ($i = 0; $i < count($data); $i++) {
                                         echo '<tr>';
-                                        echo '<td><a href="' . base_url() . 'Branch/create/' . $data[$i]->branch_id . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
-                                        echo '<td>' . $data[$i]->branch_id . '</td>';
-                                        echo '<td>' . $data[$i]->branch_name . '</td>';
+                                        echo '<td><a href="' . base_url() . 'Branch/create/' . $data[$i]->BankId . '"><i class="fas fa-eye" style="font-size: 16px;"></i></a></td>';
+                                        echo '<td>' . $data[$i]->BankId . '</td>';
+                                        echo '<td>' . $data[$i]->BankName . '</td>';
                                         echo '</tr>';
                                     }
                                     ?>

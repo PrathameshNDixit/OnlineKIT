@@ -2,7 +2,7 @@
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 //require_once(APPPATH.'/interfaces/IBase.php');	
-class Model_Branch extends CI_Model
+class Model_Gender extends CI_Model
 {
 	public function __construct()
 	{
@@ -10,14 +10,14 @@ class Model_Branch extends CI_Model
 	}
 	public function select_all()
 	{
-		$sql = $this->db->get_where('branch_master', ['is_active' => 1]);
+		$sql = $this->db->get_where('gendermaster', ['is_active' => 1]);
 		return $sql->result();
 
 	}
 
 	public function insert($model)
 	{
-		return $this->db->insert('branch_master', $model);
+		return $this->db->insert('gendermaster', $model);
 		// return $sql->result();
 	}
 
@@ -25,14 +25,13 @@ class Model_Branch extends CI_Model
 	{
 		// return $sql=$this->db->where(['branch_id',$model['branch_id'],'branch_master.is_active',1])
 
-		return $sql = $this->db->where('branch_id', $model['branch_id'])
-			->update('branch_master', $model);
-
+		return $sql = $this->db->where('GenderId', $model['GenderId'])
+			->update('gendermaster', $model);
 	}
 
 	public function search($branch_id)
 	{
-		$sql = $this->db->get_where('branch_master', ['branch_id' => $branch_id]);
+		$sql = $this->db->get_where('gendermaster', ['GenderId' => $branch_id]);
 		//print_r($sql);
 		return $sql->result();
 

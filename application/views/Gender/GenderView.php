@@ -366,7 +366,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Company</h4>
+            <h4>Add Gender</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -382,15 +382,20 @@
                             <div class="row p-3">
 
                                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Branch name</label>
-                                    <input type="text" class="form-control" id="branch_name" name="branch_name" required
+                                    <label>Gender name</label>
+                                    <input type="text" class="form-control" id="GenderName" name="GenderName" required
                                         value="<?php if (!empty($data))
-                                            echo $data[0]->branch_name; ?>" />
-
+                                            echo $data[0]->GenderName; ?>" />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
+                                    <label>Something name</label>
+                                    <input type="text" class="form-control" id="Something" name="Something" required
+                                        value="<?php if (!empty($data))
+                                            echo $data[1]->Something; ?>" />
                                 </div>
 
                                 <?php if (!empty($data)) {
-                                    echo "<input name='branch_id' id='branch_id' value='" . $data[0]->branch_id . "' type='hidden' />";
+                                    echo "<input name='GenderId' id='GenderId' value='" . $data[0]->GenderId . "' type='hidden' />";
                                 }
                                 ?>
 
@@ -412,11 +417,6 @@
                                     <button class="btn btn-md btn-warning text-white" type="button" name="cancle"
                                         id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index"
                                                 style="color:white;"></i> Edit</button>
-
-
-
-
-
                                 </div>
                             </div>
                         </form>
@@ -427,7 +427,7 @@
 
 
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/branch_create.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/gender_create.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 
