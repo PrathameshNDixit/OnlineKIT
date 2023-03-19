@@ -2,36 +2,14 @@ var a = false;
 $(document).ready(function () {
     $("#btn_save").click(function () {
         if (a == false) {
-
             saveperform();
         }
     });
 });
 function saveperform() {
-    // var fullname = $('#fullname').val();
-
-
-    // var emp_gender = $('#emp_gender').val();
-    // var age = $('#age').val();
-    // var emptype = $('#emptype').val();
-    // var Cast = $('#Cast').val();
-    // var sCast = $('#sCast').val();
-    // var emp_qualification = $('#emp_qualification').val();
-    // var department = $('#department').val();
-    // var branch = $('#branch').val();
-    // var pincode = $('#pincode').val();
-    // var adharnumber = $('#adharnumber').val();
-    // var phone = $('#phone').val();
-    // var country = $('#country').val();
-    // var state = $('#state').val();
-    // var city = $('#city').val();
-    var address = $('#Address').val();
-    var dob = $('#DateOfBirth').val();
-    var email = $('#Email').val();
-    var PrimaryMobileNumber = $('#PrimaryMobileNumber').val();
-    var sno = $('#SecondaryMobileNumber').val();
-    var dob = $('#DateOfBirth').val();
-    if (email == "" || PrimaryMobileNumber==0 || dob==0) {
+    var CompanyName = $('#CompanyName').val();
+    var Address = $('#Address').val();
+    if (CompanyName == "" || 	Address == "") {
         // alert("requird");
         swal({
             title: "",
@@ -43,7 +21,7 @@ function saveperform() {
         a = true;
         //alert('insert');
         $.ajax({
-            url: base_path + "Employee/insertEmployee",
+            url: base_path + "Company/insertCompany",
             type: "POST",
             data: $('#Form').serialize(),
             beforeSend: function () {

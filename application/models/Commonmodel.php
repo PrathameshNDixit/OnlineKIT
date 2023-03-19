@@ -17,7 +17,6 @@ class Commonmodel extends CI_Model
     function getMaxId($tableName, $fieldName)
     {
         return $this->db->select_max($fieldName)->get($tableName)->result();
-
     }
 
     function getByLikeQuery($tableName, $fieldName, $fieldValue)
