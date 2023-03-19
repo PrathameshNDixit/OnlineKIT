@@ -506,3 +506,46 @@
                 src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
             <script type="text/javascript"
                 src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap3.min.js"></script>
+
+
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+            <script type="text/javascript" src=https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js></script>
+            <script type="text/javascript"
+                src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+            <script type="text/javascript"
+                src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap3.min.js"></script>
+
+            <script>
+                $(document).ready(function () {
+                    $('#example').DataTable({
+
+
+                        responsive: true,
+                        dom: 'Bfrtip',
+                        dom: 'lBfrtip',
+                        buttons: [
+                            { extend: 'copy', text: '<i class="fa fa-copy animtxt" aria-hidden="true"></i>', className: 'buttons-copy' },
+                            { extend: 'csv', text: '<i class="fas fa-file-csv animtxt"  aria-hidden="true"></i> ', className: 'buttons-csv' },
+                            { extend: 'excel', text: '<i class="fa fa-file-excel animtxt" aria-hidden="true"></i>', className: 'buttons-excel' },
+                            { extend: 'pdf', text: '<i class="fa fa-file-pdf animtxt" aria-hidden="true"></i>', className: 'buttons-pdf' },
+                            { extend: 'print', text: '<i class="fa fa-print animtxt" aria-hidden="true"></i>', className: 'buttons-print' }
+                        ],
+                        initComplete: function () {
+                            var btns = $('.dt-button');
+                            btns.removeClass('dt-button');
+                        },
+
+                    });
+
+                });
+            </script>

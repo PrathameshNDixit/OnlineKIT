@@ -262,6 +262,10 @@
         }
     }
 
+    .input-tab {
+        margin-top: 20px;
+    }
+
     /* @media only screen and (max-width: 425px)
 {
     .breadcrumb {
@@ -357,7 +361,7 @@
 </style>
 
 
-
+<link rel="stylesheet" href="/">
 
 
 <!-- =============== Left side End ================-->
@@ -366,7 +370,7 @@
     <div class="main-content">
         <div class="breadcrumb">
             <img height="50px" width="280px" src="<?php echo base_url() ?>Assets\images\ribbon.png ">
-            <h4>Add Gender</h4>
+            <h4>Add Employee</h4>
             <!-- <ul>
                         <li><a href="href.html">Form</a></li>
                         <li>Basic</li>
@@ -380,43 +384,87 @@
                         <h3></h3>
                         <form id="Form" action="" method="POST">
                             <div class="row p-3">
-
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Gender name</label>
-                                    <input type="text" class="form-control" id="GenderName" name="GenderName" required
-                                        value="<?php if (!empty($data))
-                                            echo $data[0]->GenderName; ?>" />
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group input-tab">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" id="Email" name="Email" required value="<?php if (!empty($data))
+                                        echo $data[0]->Email; ?>" />
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group  mt-0">
-                                    <label>Something name</label>
-                                    <input type="text" class="form-control" id="Something" name="Something" required
-                                        value="<?php if (!empty($data))
-                                            echo $data[1]->Something; ?>" />
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group input-tab">
+                                    <label>Address</label>
+                                    <input type="text" class="form-control" id="Address" name="Address" required value="<?php if (!empty($data))
+                                        echo $data[1]->Address; ?>" />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group input-tab">
+                                    <label>Primary Mobile Number</label>
+                                    <input type="number" class="form-control" id="PrimaryMobileNumber"
+                                        name="PrimaryMobileNumber" required value="<?php if (!empty($data))
+                                            echo $data[2]->PrimaryMobileNumber; ?>" />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group input-tab">
+                                    <label>Secondary Mobile Number</label>
+                                    <input type="text" class="form-control" id="SecondaryMobileNumber"
+                                        name="SecondaryMobileNumber" required value="<?php if (!empty($data))
+                                            echo $data[3]->SecondaryMobileNumber; ?>" />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group input-tab">
+                                    <label>Date of Joining</label>
+                                    <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" required
+                                        value="
+                                    <?php if (!empty($data))
+                                        echo $data[4]->DateOfBirth; ?>" />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group input-tab">
+                                    <label>Date of Joining</label>
+                                    <input type="date" class="form-control" id="DateOfJoining" name="DateOfJoining"
+                                        required value="
+                                    <?php if (!empty($data))
+                                        echo $data[5]->DateOfJoining; ?>" />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group input-tab">
+                                    <label>Photo</label>
+                                    <input type="file" class="form-control" id="Photo" name="Photo"
+                                        required value="
+                                    <?php if (!empty($data))
+                                        echo $data[6]->Photo; ?>" />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group input-tab">
+                                    <label>Aadhar Number</label>
+                                    <input type="number" class="form-control" id="AadharNumber" name="AadharNumber"
+                                        required value="
+                                    <?php if (!empty($data))
+                                        echo $data[7]->AadharNumber; ?>" />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3  form-group input-tab">
+                                    <label>Pan Number</label>
+                                    <input type="text" class="form-control" id="PanNumber" name="PanNumber" required
+                                        value="
+                                    <?php if (!empty($data))
+                                        echo $data[8]->PanNumber; ?>" />
                                 </div>
 
                                 <?php if (!empty($data)) {
-                                    echo "<input name='GenderId' id='GenderId' value='" . $data[0]->GenderId . "' type='hidden' />";
+                                    echo "<input name='EmployeeId' id='EmployeeId' value='" . $data[0]->EmployeeId . "' type='hidden' />";
                                 }
                                 ?>
-
-
-
-                                <!-- <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
-                                    <label for=""> Type</label>
-                                    <select name="company_type" id="company_type" data-control="select2"
-                                        data-hide-search="true" class="js-states form-control nav selectpicker">
-                                        <option selected disabled value="0">Marathi</option>
-                                        <option value="1">English</option>
-                                    </select>
-                                </div> -->
-                                <div class="col-md-12 text-right">
-                                    <button class="btn btn-md btn-success btnright text-white" type="button"
-                                        name="btn_save" id="btn_save"><i
+                                <div type="submit" class="col-md-12 text-right">
+                                    <button class="btn btn-md btn-success btnright text-white" 
+                                        name="btn_save" type="button" id="btn_save"><i
                                             class="nav-icon fa-regular fa-circle-check "></i> Save</button>
 
+                                    <!-- <button class="btn btn-md btn-warning text-white" type="button" name="cancle" id="cancle">
+                                        <i class="fa-sharp fa-solid fa-pen-to-square">
+                                        <a href="index"style="z-index:-1;color:white;"></i> Edit
+                                    </button> -->
                                     <button class="btn btn-md btn-warning text-white" type="button" name="cancle"
-                                        id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index"
-                                                style="color:white;"></i> Edit</button>
+                                        id="cancle">
+                                        <a href="index" style="background-color: transparent;
+                                                                color:white;
+                                                                text-decoration:none;">
+                                            <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                                            Edit
+                                        </a>
+
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -427,7 +475,7 @@
 
 
         <script src="<?php echo base_url('web_resources'); ?>/dist/js/jquery.min.js"></script>
-        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/gender_create.js"></script>
+        <script src="<?php echo base_url('web_resources'); ?>/dist/js/controllers/employee_create.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 
@@ -437,3 +485,4 @@
             $("#company_type").select2({});
 
         </script>
+        

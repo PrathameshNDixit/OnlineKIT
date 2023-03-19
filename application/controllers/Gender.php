@@ -6,13 +6,13 @@ class Gender extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Model_Gender');
+        // $this->load->model('Model_Gender');
     }
     public function index()
     {
-        $data['data'] = $this->Model_Gender->select_all();
+        $data['data'] = $this->Commonmodel->getAll("gendermaster");
         $this->load->view('common/header_view');
-        $this->load->view('Gender/GenderDetailsView');
+        $this->load->view('Gender/GenderDetailsView', $data);
         $this->load->view('common/footer_view');
     }
     public function create()
@@ -24,9 +24,9 @@ class Gender extends CI_Controller
             $GenderId = 0;
         }
 
-        if ($GenderId > 0) {
-            $obj = $this->Model_Gender->search($GenderId);
-        }
+        // if ($GenderId > 0) {
+        //     $obj = $this->Model_Gender->search($GenderId);
+        // }
         $data['data'] = $obj;
         $this->load->view('common/header_view');
         $this->load->view('Gender/GenderView');

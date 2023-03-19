@@ -10,8 +10,9 @@ class City extends CI_Controller
 
     public function index()
     {
+        $data['data'] = $this->Commonmodel->getAll("citymaster");
         $this->load->view('common/header_view');
-        $this->load->view('City/CityDetailsView');
+        $this->load->view('City/CityDetailsView',$data);
         $this->load->view('common/footer_view');
     }
     public function create()

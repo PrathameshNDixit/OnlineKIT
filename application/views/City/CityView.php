@@ -410,7 +410,7 @@
                                             class="nav-icon fa-regular fa-circle-check "></i> Save</button>
 
                                     <button class="btn btn-md btn-warning text-white" type="button" name="cancle"
-                                        id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="index"
+                                        id="cancle"><i class="fa-sharp fa-solid fa-pen-to-square"><a href="<?php echo base_url(); ?>/gender/index"
                                                 style="color:white;"></i> Edit</button>
 
 
