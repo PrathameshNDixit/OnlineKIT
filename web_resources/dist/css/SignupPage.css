@@ -6,14 +6,6 @@
     font-family: 'Montserrat', sans-serif;
     background-color: #ddd;
 }
-.div{
-    background-color: transparent;
-    text-align: center;
-}
-.div a{
-    background-color: transparent;
-}
-
 body{
     background-color: #ddd;
 }
@@ -24,7 +16,8 @@ body{
     justify-content: center;
     align-items: center;
     padding: 100px;
-    /* margin-top: 50px; */
+    padding-top: 0;
+    margin-top: 50px;
 }
 .input-div{
     display: flex;
@@ -43,7 +36,7 @@ body{
     font-weight: bold;
 }
 .login-card{
-    width: 400px;
+    width: 500px;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;

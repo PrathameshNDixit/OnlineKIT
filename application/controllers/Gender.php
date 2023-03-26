@@ -6,7 +6,13 @@ class Gender extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->loggedin();
         // $this->load->model('Model_Gender');
+    }
+    private function loggedin(){
+        if(!$this->session->userdata('authenticated')){
+            redirect('users/login');
+        }
     }
     public function index()
     {

@@ -6,6 +6,12 @@ class City extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->loggedin();
+    }
+    private function loggedin(){
+        if(!$this->session->userdata('authenticated')){
+            redirect('users/login');
+        }
     }
 
     public function index()

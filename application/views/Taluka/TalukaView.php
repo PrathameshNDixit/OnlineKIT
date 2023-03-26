@@ -393,8 +393,6 @@
                                 }
                                 ?>
 
-
-
                                 <!-- <div class="form-group custom-dropdown  mt-0 col-lg-3 ">
                                     <label for=""> Type</label>
                                     <select name="company_type" id="company_type" data-control="select2"

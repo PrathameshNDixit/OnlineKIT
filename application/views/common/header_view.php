@@ -300,7 +300,7 @@
     <link rel="stylesheet"
         href="<?= base_url(); ?>https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="<?= base_url() ?>Assets/images/studentlogo.png" sizes="32x32" type="image/png">
 
     <!-- ******* Added New Links***** -->
@@ -446,8 +446,13 @@
                                             class="fa fa-lg fa-fw fa-user-circle-o" aria-hidden="true"></i>Profile</a>
                                 </div>
                                 <!-- <div class="p-2 dropdown-item"><div><i class="fa  fa-lg fa-spin fa-lg fa-fw fa-cog " aria-hidden="true"></i></div><a href="#">Setting</a></div> -->
-                                <div class="p-2 dropdown-item"><a href="Login/logout" style="color:6F6F6F;"><i
-                                            class="fa fa-lg  fa-fw fa-sign-out" aria-hidden="true"></i>Logout</a></div>
+
+
+                                <div class="p-2 dropdown-item">
+                                    <a href="<?php echo base_url() ?>users/logout" style="color:6F6F6F;"><i
+                                            class="fa fa-lg  fa-fw fa-sign-out" aria-hidden="true"></i>Logout</a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
